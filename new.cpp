@@ -12,6 +12,10 @@ int main (){
 
   cout << "the process is finish.."<< endl ;
   cout << "değer gir (1 c)" << endl;
+  cout << "the process is finish.."<< endl ;
+  cout << "değer gir (1 c)" << endl;
+  cout << "the process is finish.."<< endl ;
+  cout << "değer gir (1 c)" << endl;
 
   int num ;
   cin >> num;
