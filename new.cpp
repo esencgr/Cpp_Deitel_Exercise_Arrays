@@ -11,6 +11,12 @@ int main (){
       toplam += a[i];
 
   cout << "elamanlar toplami = " << toplam << endl;
+  cout << "hello dunya" << endl;
 
-  return 0;    
+  for (int i=0; i < BOYUT; i++)
+      cout << a[i] << " ";
+
+  cout << endl;
+
+  return 0;
 }
