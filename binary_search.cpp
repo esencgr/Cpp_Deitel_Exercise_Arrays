@@ -31,15 +31,15 @@ return 0;
 /* head information and indeces number is writing */
 
 void head_printing (void){
-  cout << "indeces" << endl;
+     cout << "indeces" << endl;
 
-  for (int i=0; i<=SIZE-1; i++)
-      cout << " " << i;
-  cout << endl;
+     for (int i=0; i<=SIZE-1; i++)
+         cout << " " << i;
+     cout << endl;
 
-  for (int j=0; j<SIZE*4; j++)
-      cout << "-";
-  cout << endl;
+     for (int j=0; j<SIZE*4; j++)
+         cout << "-";
+     cout << endl;
 }
 
 /* Calculate medium value and comparing searched value.
@@ -51,15 +51,15 @@ int binary (const int b[], int value, int down, int up){
     int medium;
 
     while (down <= up){
-       medium = (up + down) / 2;
-       line_print (b, down, medium, up);
+         medium = (up + down) / 2;
+         line_print (b, down, medium, up);
 
-       if (value == b[medium])
-         return medium;
-       else if (value < b[medium])
-         up = medium - 1;
-       else
-         down = medium + 1;
+         if (value == b[medium])
+            return medium;
+         else if (value < b[medium])
+            up = medium - 1;
+         else
+            down = medium + 1;
     }
 
   return -1;
