@@ -1,4 +1,4 @@
-// DEITEL ARRAY EXAMPLES -- 6.11
+// DEITEL ARRAY EXAMPLES -- 6.11-a
 #include <iostream>
 #define SIZE 10
 using namespace std;
@@ -27,6 +27,6 @@ int main (){
 
   cout << "in ascending order array : ";
     for (int j=0; j < SIZE; j++)
-       cout << array [j] << " ";
-    cout << "\nNumber of comparisons = " << number_of_comp << endl;
+       cout << array [j] << " " << endl;
+  cout << "\nNumber of comparisons = " << number_of_comp << endl;
 }
