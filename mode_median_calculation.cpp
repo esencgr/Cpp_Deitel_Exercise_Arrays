@@ -75,13 +75,13 @@ void median (int answer [], int SIZE){
          }
     cout << "\n\n";
 
-         if (SIZE % 2 == 0){           // even number of elements
+         if (SIZE % 2 == 0)            // even number of elements
             cout << "The median is the average of elements " << (SIZE + 1) / 2
                  << " and " << 1 + ( SIZE + 1 ) / 2 << " of the sorted "
                  << SIZE << " element array." << "For this run the median is : "
                  << double((answer [(SIZE + 1)/2]) + (answer [1 + (SIZE + 1)/2])) / 2
                  << endl;
-         }
+
          else                           // odd number of elements
             cout << "The median is element " << (SIZE + 1) / 2 << "of "
                  << "the sorted " << SIZE << " element array.\n "
