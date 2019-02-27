@@ -1,3 +1,4 @@
+// deitel array exercise - 6.14 -
 #include <iostream>
 using namespace std;
 void mean (int [], int);
