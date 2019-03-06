@@ -16,7 +16,6 @@ int main() {
              temp = 1;
              break;
          }
-
          if ( !temp )
             array [subscript++] = number ;
   }

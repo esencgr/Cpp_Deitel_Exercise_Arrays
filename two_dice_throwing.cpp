@@ -1,3 +1,4 @@
+//// deitel array exercise - 6.19 -
 #include <iostream>
 #include <time.h>
 #include <stdlib.h>
