@@ -1,3 +1,4 @@
+/* ıt is a basic example */
 #include <iostream>
 using namespace std;
 void print_array (const int [][3]);

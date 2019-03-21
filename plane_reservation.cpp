@@ -1,3 +1,4 @@
+// Deitel array exercise - 6.20 -
 #include <iostream>
 #include <cctype>
 #define SEATS 11
