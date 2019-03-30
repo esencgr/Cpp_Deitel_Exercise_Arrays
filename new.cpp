@@ -1,4 +1,4 @@
-
+// Deitel array exercise -6.15-
 #include <iostream>
 #define SIZE 5
 using namespace std;
@@ -11,13 +11,21 @@ int main() {
       cin >> number;
       temp = 0;
 
+      for (int j = 0; j < subscript; j++)
+         if (number == array [j]){
+             temp = 1;
+             break;
+         }
+         if ( !temp )
+            array [subscript++] = number ;
   }
 
-  for (int k = 0; array [ k ] != 0; ++k )
-      cout << array [ k ] << " ";
+  cout << "\nThe nonduplicate values are:\n";
+
+        for (int k = 0; array [ k ] != 0; ++k )
+            cout << array [ k ] << " ";
 
   cout << endl;
-
 
 return 0;
 }
