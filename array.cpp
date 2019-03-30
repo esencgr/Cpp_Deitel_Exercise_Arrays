@@ -28,6 +28,12 @@ int main(){
     cout << "sum of array's elements = " << sum << endl;
     cout << "average of array's elements = " << double(sum / size)<< endl;
     cout << "geometric average of array's elements = " << pow(product,(double)1/size) << endl;
-
+    cout << "sum of array's elements = " << sum << endl;
+    cout << "average of array's elements = " << double(sum / size)<< endl;
+    cout << "geometric average of array's elements = " << pow(product,(double)1/size) << endl;
+    cout << "sum of array's elements = " << sum << endl;
+    cout << "average of array's elements = " << double(sum / size)<< endl;
+    cout << "geometric average of array's elements = " << pow(product,(double)1/size) << endl;
+    
 return 0;
 }
