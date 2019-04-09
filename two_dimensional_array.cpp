@@ -4,7 +4,7 @@ using namespace std;
 void print_array (const int [][3]);
 
 int main (){
-  int array_1 [2][3] = {{1,2,3},{4,3}};
+  int array_1 [2][3] = {{1,7,9},{4,3}};
   int array_2 [2][3] = {1,2,3,4};
   int array_3 [2][3] = {{1,2},{2}};
 
