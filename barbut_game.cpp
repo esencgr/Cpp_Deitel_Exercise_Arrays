@@ -18,7 +18,6 @@ chances of winning in the other for loop. calculating average length of game
 in the end for code..
 */
   for (int i = 1; i <= ROLLS; i++){
-
       sum = dice_throw();
       roll = 1;
       switch (sum){
