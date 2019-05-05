@@ -133,5 +133,5 @@ void mode (int frequency [], int answer [], int SIZE , int MAXFREQ){
        for ( int m = 1; m < SIZE2; ++m )
            if ( array[ m ] != 0 )
                cout << "\n" << m << " with a frequency of " << array[ m ] ;
-               cout << endl;
+       cout << endl;
 }
