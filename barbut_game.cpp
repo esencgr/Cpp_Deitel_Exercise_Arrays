@@ -64,7 +64,7 @@ in the end for code..
            << "on roll " << z << endl;
 
   //calculate chances of winning
-  cout     << "\nThe chances of winning are " << winSum << " / "
+  cout << "\nThe chances of winning are " << winSum << " / "
        << winSum + loseSum << " = %" << 100.0 * winSum / ( winSum + loseSum )
        << endl;
 
@@ -79,7 +79,6 @@ return 0;
 
 int dice_throw (void){
   int dice1, dice2,total;
-
   dice1 = 1 + rand() % 6;
   dice2 = 1 + rand() % 6;
   total = dice1 + dice2;
