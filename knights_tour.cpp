@@ -6,7 +6,6 @@
 #define SIZE 8
 using namespace std;
 
-
 void clear_board ( int [][ SIZE ] );
 void print_board ( const int [][ SIZE ] );
 bool valid_move ( int, int, const int [][ SIZE ] );
@@ -34,7 +33,7 @@ int main(){
 
    while ( !done ){
      access_number = min_access;
-
+  u
      for (int move_type = 0;  move_type < SIZE;  move_type++ ){
          test_row = current_row + vertical[ move_type ];
          test_col = current_col + horizontal[ move_type ];
