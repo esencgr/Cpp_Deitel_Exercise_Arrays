@@ -83,7 +83,7 @@ void print_board ( const int work_board [][ SIZE ] ) {
         cout << row;
         for ( int col = 0; col < SIZE;  col++ )
              cout << "\t" << work_board [ row ][ col ];
-    cout << endl;
+    cout << endl << endl;
     }
  cout << endl;
 }
