@@ -33,7 +33,7 @@ int main(){
 
    while ( !done ){
      access_number = min_access;
-  u
+
      for (int move_type = 0;  move_type < SIZE;  move_type++ ){
          test_row = current_row + vertical[ move_type ];
          test_col = current_col + horizontal[ move_type ];
@@ -72,22 +72,22 @@ int main(){
 void clear_board ( int work_board [][ SIZE ] ) {
     for ( int row = 0; row < SIZE;  row++ ) {
         for ( int col = 0; col < SIZE;  col++ ) {
-             work_board [ row ][ col ] == 0;
+             work_board [ row ][ col ] = 0;
         }
     }
 }
 
 void print_board ( const int work_board [][ SIZE ] ) {
-    cout << "   " << "0 1 2 3 4 5 6 7\n";
+    cout << "\t" << "0\t" << "1\t" << "2\t" << "3\t" << "4\t" << "5\t" << "6\t" << "7\n\n";
     for ( int row = 0; row < SIZE;  row++ ) {
         cout << row;
         for ( int col = 0; col < SIZE;  col++ )
-             cout << "   " << work_board [ row ][ col ];
+             cout << "\t" << work_board [ row ][ col ];
     cout << endl;
     }
  cout << endl;
 }
 
 bool valid_move ( int row, int col, const int work_board[][ SIZE ] ) {
-    return ( row >= 0  &&  row <= SIZE  &&  col >= 0  &&  col < SIZE && work_board [ row ][ col ] == 0 );
+    return ( row >= 0  &&  row < SIZE  &&  col >= 0  &&  col < SIZE  &&  work_board [ row ][ col ] == 0 );
 }
