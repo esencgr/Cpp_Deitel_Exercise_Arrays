@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main(){
+
+}#include <time.h>
+#include <stdlib.h>
+#include <ctime>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    double x = -87.91, result;
+
+    result = abs(x);
+    cout << "abs(" << x << ") = |" << x << "| = " << result << endl;
+
+    return 0;
+}
