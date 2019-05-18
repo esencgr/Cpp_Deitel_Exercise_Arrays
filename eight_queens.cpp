@@ -23,7 +23,7 @@ inline int valid_move ( const char board [][ 8 ], int row, int col )
 
 int main(){
     char board [ 8 ][ 8 ] = {'\0'};
-    
+
     srand( time( 0 ) );
 
     place_queens ( board );
@@ -157,5 +157,5 @@ void print_board( const char board[][ 8 ] ){
    if ( queens == 8 )
       cout << "\nEight Queens were placed on the board!" << endl;
    else
-     cout << '\n' << queens << " Queens were placed on the board." << endl;
+      cout << '\n' << queens << " Queens were placed on the board." << endl;
 }
