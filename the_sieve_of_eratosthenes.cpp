@@ -8,8 +8,8 @@ Eratosthenes is a method of finding prime numbers. It operates as follows:
       element with value 1. For array subscript 2, all elements beyond 2 in the array that are multiples of 2 will be set to
       zero (subscripts 4, 6, 8, 10, etc.); for array subscript 3, all elements beyond 3 in the array that are multiples of 3
       will be set to zero (subscripts 6, 9, 12, 15, etc.); and so on,
-  When this process is complete, the array elements that are still set to one indicate that the subscript is a prime number. These subscripts
-  can then be printed. Write a program that uses an array of 1000 elements to determine and print the prime numbers between
+  When this process is complete, the array elements that are still set to one indicate that the subscript is a prime number.
+  These subscripts can then be printed. Write a program that uses an array of 1000 elements to determine and print the prime numbers between
   1 and 999. Ignore element 0 of the array.
 */
 
