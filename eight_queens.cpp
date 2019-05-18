@@ -22,11 +22,12 @@ inline int valid_move ( const char board [][ 8 ], int row, int col )
   { return ( row >= 0 && row < 8 && col >= 0 && col < 8 ); }
 
 int main(){
-   char board [ 8 ][ 8 ] = {'\0'};
-   srand( time( 0 ) );
+    char board [ 8 ][ 8 ] = {'\0'};
+    
+    srand( time( 0 ) );
 
-   place_queens ( board );
-   print_board ( board );
+    place_queens ( board );
+    print_board ( board );
 
    return 0;
 }
@@ -39,6 +40,7 @@ bool available_square ( const char board [][ 8 ] ){
 
     return true; // square is not available
 }
+
 void place_queens ( char board [][ 8 ] ){
     const char QUEEN = 'Q';
     int row_move, col_move, queens = 0;
@@ -56,6 +58,7 @@ void place_queens ( char board [][ 8 ] ){
     done = available_square ( board );
     }
 }
+
 void x_conflict ( char board [][ 8 ], int row, int col ){
 
    for (int loop = 0;  loop < 8;  ++loop){
@@ -73,36 +76,36 @@ void x_conflict ( char board [][ 8 ], int row, int col ){
 }
 
 bool queen_check ( const char board [][ 8 ], int row , int col){
-  int r = row, c = col;
+   int r = row, c = col;
 
-  // check row and column for a queen
-  for ( int d = 0;  d < 8;  ++d )
+   // check row and column for a queen
+   for ( int d = 0;  d < 8;  ++d )
       if ( board [ row ][ d ] == 'Q'  ||  board [ d ][ col ] == 'Q' )
          return false;
 
-  // check upper left diagonal for a queen
-  for ( int e = 0;  e < 8  &&  valid_move ( board, --r, --c ); ++e )
+   // check upper left diagonal for a queen
+   for ( int e = 0;  e < 8  &&  valid_move ( board, --r, --c ); ++e )
       if ( board [ r ][ c ] == 'Q')
          return false;
 
-  r = row;
-  c = col;
-  // check upper right diagonal for a queen
-  for ( int f = 0;  f < 8  &&  valid_move ( board, --r, ++c ); ++f )
+   r = row;
+   c = col;
+   // check upper right diagonal for a queen
+   for ( int f = 0;  f < 8  &&  valid_move ( board, --r, ++c ); ++f )
       if ( board [ r ][ c ] == 'Q')
          return false;
 
-  r = row;
-  c = col;
-  // check lower left diagonal for a queen
-  for ( int g = 0;  g < 8  &&  valid_move ( board, ++r, --c ); ++g )
+   r = row;
+   c = col;
+   // check lower left diagonal for a queen
+   for ( int g = 0;  g < 8  &&  valid_move ( board, ++r, --c ); ++g )
       if ( board [ r ][ c ] == 'Q')
          return false;
 
-  r = row;
-  c = col;
-  // check lower right diagonal for a queen
-  for ( int h = 0;  h < 8  &&  valid_move ( board, ++r, ++c ); ++h )
+   r = row;
+   c = col;
+   // check lower right diagonal for a queen
+   for ( int h = 0;  h < 8  &&  valid_move ( board, ++r, ++c ); ++h )
       if ( board [ r ][ c ] == 'Q')
          return false;
 
@@ -111,38 +114,37 @@ bool queen_check ( const char board [][ 8 ], int row , int col){
 
 
 void x_diagonals ( char board [][ 8 ], int row, int col ) {
-  int  r = row, c = col;
+   int  r = row, c = col;
 
-  // upper left diagonal
-  for ( int a = 0;  a < 8  &&  valid_move ( board, --r, --c ); ++a )
-      board [ r ][ c ] = '*';
+   // upper left diagonal
+   for ( int a = 0;  a < 8  &&  valid_move ( board, --r, --c ); ++a )
+       board [ r ][ c ] = '*';
 
-  r = row;
-  c = col;
-  // upper right diagonal
-  for ( int b = 0;  b < 8  &&  valid_move ( board, --r, ++c ); ++b )
-      board [ r ][ c ] = '*';
+   r = row;
+   c = col;
+   // upper right diagonal
+   for ( int b = 0;  b < 8  &&  valid_move ( board, --r, ++c ); ++b )
+       board [ r ][ c ] = '*';
 
-  r = row;
-  c = col;
-  // lower left diagonal
-  for ( int d = 0;  d < 8  &&  valid_move ( board, ++r, --c ); ++d )
-      board [ r ][ c ] = '*';
+   r = row;
+   c = col;
+   // lower left diagonal
+   for ( int d = 0;  d < 8  &&  valid_move ( board, ++r, --c ); ++d )
+       board [ r ][ c ] = '*';
 
-  r = row;
-  c = col;
-  // lower right diagonal
-  for ( int e = 0;  e < 8  &&  valid_move ( board, ++r, ++c ); ++e )
-      board [ r ][ c ] = '*';
+   r = row;
+   c = col;
+   // lower right diagonal
+   for ( int e = 0;  e < 8  &&  valid_move ( board, ++r, ++c ); ++e )
+       board [ r ][ c ] = '*';
 
 }
 
 void print_board( const char board[][ 8 ] ){
-int queens = 0;
+   int queens = 0;
 
-// header for columns
-cout << "   0 1 2 3 4 5 6 7\n";
-
+   // header for columns
+   cout << "   0 1 2 3 4 5 6 7\n";
    for ( int r = 0; r < 8; ++r ) {
        cout << setw(2) << r << ' ';
        for ( int c = 0; c < 8; ++c ) {
