@@ -1,9 +1,11 @@
 #include <iostream>
 #include <ctime>
 #include <iomanip>
+#include <cstdlib>
 #include <string>
 #include <cmath>
 #include <algorithm>
+#include <cstdlib>
 using namespace std;
 int main(){
 
