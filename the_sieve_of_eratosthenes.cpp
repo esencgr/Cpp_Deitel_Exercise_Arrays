@@ -23,9 +23,9 @@ int main(){
         array [k] = 1;
 
     for (int i = 2;  i < SIZE;  i++)
-           for (int j = i;  j <= SIZE;  j++)
-               if ( j % i == 0 &&  j != i )
-                  array [j] = 0;
+        for (int j = i;  j <= SIZE;  j++)
+            if ( j % i == 0 &&  j != i )
+               array [j] = 0;
 
     for (int q = 2;  q < SIZE;  q++) {
         if (array [q] == 1){
