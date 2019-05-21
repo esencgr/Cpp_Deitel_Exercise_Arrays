@@ -3,7 +3,7 @@
 #define SIZE 10
 using namespace std;
 int main (){
-  int array [SIZE] = {2, 6, 4, 8, 10, 12, 89, 68, 45, 37};
+  int array [SIZE] = { 2, 6, 4, 8, 10, 12, 89, 68, 45, 37 };
 
   cout << "original array : ";
       for (int i=0; i < SIZE; i++)
@@ -29,4 +29,6 @@ int main (){
     for (int j=0; j < SIZE; j++)
        cout << array [j] << " " << endl;
   cout << "\nNumber of comparisons = " << number_of_comp << endl;
+
+  return 0;
 }
