@@ -1,1 +1,2 @@
 # Cpp_deitel_exercise_arrays
+Cpp_deitel_exercise_functions
