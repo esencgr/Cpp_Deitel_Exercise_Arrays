@@ -106,18 +106,18 @@ int rand_digit(void){
 Üretilen sayının basamaklarının birbirinden farklı olup olmadığını test eden fonksiyon
 */
 bool is_valid(int number){
-   int temp, i, j;
-   for (i = 0; i < 10; i++) {
-      j = 0;
-      temp = number;
-      while (temp > 0) {
-         if (temp % 10 == i)
-            j++;
-         if (j > 1)
-            return 0;
-         temp /= 10;
-      }
-   }
+    int temp, i, j;
+    for (i = 0; i < 10; i++) {
+        j = 0;
+        temp = number;
+        while (temp > 0) {
+            if (temp % 10 == i)
+               j++;
+            if (j > 1)
+               return 0;
+        temp /= 10;
+        }
+    }
    return 1;
 }
 
@@ -127,14 +127,14 @@ ile test eden fonksiyon. Bu fonksiyon bilgisayar tahminini optimize etmek amacı
 kullanılacak
 */
 bool is_valid_arr(int number[]){
-   for (int i = 0; i < 10; i++){
-      int count = 0;
-      for (int j = 0; j < 4; j++){
-          if ( number[ j ] == i )
-             count += 1;
-          if ( count > 1 )
-             return 0;
-      }
+    for (int i = 0; i < 10; i++){
+        int count = 0;
+        for (int j = 0; j < 4; j++){
+            if ( number[ j ] == i )
+               count += 1;
+            if ( count > 1 )
+               return 0;
+        }
     }
     return 1;
 }
@@ -186,16 +186,3 @@ void print( int arr[] ){
     for (int i = 3;  i >= 0;  i--)
         cout << arr[ i ];
 }
-
-// void change_value2( int comp[], int num1[], int num2[]){
-//
-//      for ( int i = 3;  i >= 0;  i-- ){
-//          if ( comp[ i ] == -1 ){
-//             for ( int j = 3;  j >= 0;  j-- ){
-//                 if ( num1 [ i ] == num2[ j ] ){
-//                     num1[ i ] == num2[ j ];
-//                 }
-//             }
-//          }
-//      }
-// }
