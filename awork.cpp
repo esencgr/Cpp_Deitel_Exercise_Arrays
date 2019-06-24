@@ -23,6 +23,8 @@ int main(){
     int user1, software1, user2, software2;
     int u1[ 4 ] = { 0 }, s1[ 4 ] = { 0 }, u2[ 4 ] = { 0 }, s2[ 4 ] = { 0 };
     int comp1[ 4 ] = { 0 }, comp2[ 4 ] = { 0 };
+
+
     /*
     Bu bölümde tahmin edilecek olan başlangıç değerleri bilgisayar ve kullanıcı
     tarafından oluşturulur. Sayının rakamlarının tekrar etmesi durumunda sayının
@@ -39,6 +41,8 @@ int main(){
         cout << " User's generated number : ";
         cin >> user2;
     } while (!is_valid ( user2 ));
+
+
     /*
     Bu bölümde kullanıcı ve yazılım, iki taraftan biri doğru tahmin edene kadar.
     tahminlerde bulunur. Sayının rakamlarının tekrar etmesi durumunda sayının
@@ -49,8 +53,8 @@ int main(){
 
         cout << "\n\n User is guessing computer's number..\n";
         do{
-           cout << " User's valid number : ";
-           cin >> user1;
+            cout << " User's valid number : ";
+            cin >> user1;
         } while ( !is_valid ( user1) );
 
         cout << " User's information : ";
@@ -151,8 +155,9 @@ void move_to_array( int num, int n[] ){
 }
 
 /*
-İki sayı içinde oluşturulan dizilerin karşılaştırılıp değeri doğru olan ancak
-yanlış basamakta bulunanların değerine -1 ve hiç bulunmayanlara 0 atayan fonksiyon
+İki sayı için oluşturulan dizilerin karşılaştırılıp değeri doğru olan ancak yanlış
+basamakta bulunanların değerine -1 ve doğru basamakata bulunanlara 1 değeri atayan
+fonksiyon
 */
 void digit_control( int num2[], int num1[], int diff[] ){
      for (int i = 3; i >= 0;  i--){
@@ -166,12 +171,12 @@ void digit_control( int num2[], int num1[], int diff[] ){
 }
 
 /*
-Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki(-1 0 1 değerlere
-sahip dizi) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
+Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki (-1 0 1 değerlere
+sahip diziler ) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
 sağlayan fonksiyon
 */
 void change_value1( int comp[], int num1[] ){
-     int temp[ 10 ] = { 0 }, used = 0;
+     int temp[ 10 ] = { 0 };
      for ( int i = 3; i >= 0;  i-- ){
          if ( comp[ i ] == 0 ){
             num1[ i ] = rand_digit();
