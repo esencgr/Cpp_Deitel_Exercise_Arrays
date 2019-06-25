@@ -56,7 +56,7 @@ int main(){
         do{
             cout << " User's valid number : ";
             cin >> user1;
-        } while ( !is_valid ( user1) );
+        }while ( !is_valid ( user1) );
 
         cout << " User's information : ";
         move_to_array( software1, s1 );
@@ -72,7 +72,7 @@ int main(){
         cout << "\n\n Computer is guessing user's number..";
         do{
             change_digit( s2, u2, comp2);
-        } while ( !is_valid_arr( s2 ) );
+        }while ( !is_valid_arr( s2 ) );
         cout << "\n Computer's valid number : " ;
         print ( s2 );
 
@@ -122,7 +122,7 @@ bool is_valid(int number){
         temp /= 10;
         }
     }
-   return 1;
+    return 1;
 }
 
 /*
@@ -160,16 +160,15 @@ basamakta bulunanların değerine -1 ve doğru basamakata bulunanlara 1 değeri 
 fonksiyon
 */
 void digit_control( int num2[], int num1[], int diff[] ){
-     for (int i = 3; i >= 0;  i--){
+    for (int i = 3; i >= 0;  i--){
         diff[ i ] = 0;
-         for (int j = 3; j >= 0; j--) {
-             if ( num1[ i ] == num2[ j ] )
-                diff[ i ] = -1;
-             if ( num1[ i ] == num2[ i ] )
-                diff[ i ] = 1;
-
-          }
-     }
+        for (int j = 3; j >= 0; j--) {
+            if ( num1[ i ] == num2[ j ] )
+               diff[ i ] = -1;
+            if ( num1[ i ] == num2[ i ] )
+               diff[ i ] = 1;
+        }
+    }
 }
 
 /*
@@ -179,22 +178,22 @@ sağlayan fonksiyon. Aynı zamanda karşılaştırma değeri 0 olan fonksyonlar 
 tahminlerin kullanılmaması için 10 boyutlu bir dizi kullanılmıştır.
 */
 void change_digit( int s2[], int u2[], int comp[]){
-     int temp[ 10 ] = { 0 };
-     for ( int i = 3; i >= 0;  i-- ){
-         if ( comp[ i ] == 0 ){
-            if ( temp[ i ] == 0 ){
-               s2[ i ] = rand_digit();
-               int x = s2[ i ];
-               temp[ i ] = 1;
-            }
-         }
-         for ( int j = 3; j >= 0;  j-- ){
-             if ( s2[ i ] == u2[ j ] ){
-                 s2[ j ] = u2[ j ];
-                 s2[ i ] = u2[ i ];
-             }
-          }
-     }
+    int temp[ 10 ] = { 0 };
+    for ( int i = 3; i >= 0;  i-- ){
+        if ( comp[ i ] == 0 ){
+           if ( temp[ i ] == 0 ){
+              s2[ i ] = rand_digit();
+              int x = s2[ i ];
+              temp[ i ] = 1;
+           }
+        }
+        for ( int j = 3; j >= 0;  j-- ){
+           if ( s2[ i ] == u2[ j ] ){
+              s2[ j ] = u2[ j ];
+              s2[ i ] = u2[ i ];
+           }
+        }
+    }
 }
 
 /*
