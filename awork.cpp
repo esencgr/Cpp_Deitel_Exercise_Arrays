@@ -15,7 +15,7 @@ void move_to_array( int, int[] );
 void digit_control( int [], int [], int [] );
 void change_digit( int [], int [], int [] );
 bool equal ( int [], int [] );
-void print( int[] );
+void print( int [] );
 
 int main(){
 
@@ -35,7 +35,7 @@ int main(){
     do{
         software1 = rand_number();
     } while (!is_valid ( software1 ));
-    //cout << " Computers number : " << software1 << endl;
+    cout << " Computers number : " << software1 << endl;
 
     cout << "\n\n User is generating a number for computer.. \n";
     do{
@@ -70,8 +70,9 @@ int main(){
         }
 
         cout << "\n\n Computer is guessing user's number..";
+        //int temp[ 10 ] = { 0 };
         do{
-            change_digit( s2, u2, comp2);
+            change_digit( s2, u2, comp2 );
         }while ( !is_valid_arr( s2 ) );
         cout << "\n Computer's valid number : " ;
         print ( s2 );
@@ -177,18 +178,20 @@ sahip diziler ) değerlerle karşılaştırıp 1 olmayan elemanların tekrar ür
 sağlayan fonksiyon. Aynı zamanda karşılaştırma değeri 0 olan fonksyonlar için önceki
 tahminlerin kullanılmaması için 10 boyutlu bir dizi kullanılmıştır.
 */
-void change_digit( int s2[], int u2[], int comp[]){
-    int temp[ 10 ] = { 0 };
+void change_digit( int s2[], int u2[], int comp[] ){
+    int temp[ 10 ] = { 0 }, x = 0;
     for ( int i = 3; i >= 0;  i-- ){
         if ( comp[ i ] == 0 ){
-           if ( temp[ i ] == 0 ){
-              s2[ i ] = rand_digit();
-              int x = s2[ i ];
-              temp[ i ] = 1;
-           }
+              if ( temp[ x ] == 0 ) {
+                  s2[ i ] = rand_digit();
+                  int x = s2[ i ];
+                  temp[ x ] += 1;
+              }
+
         }
+
         for ( int j = 3; j >= 0;  j-- ){
-           if ( s2[ i ] == u2[ j ] ){
+           if ( comp[ i ] == -1 ){
               s2[ j ] = u2[ j ];
               s2[ i ] = u2[ i ];
            }
